@@ -8,6 +8,7 @@ const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 const darkVars = require('./scripts/dark-vars');
 const b2bVars = require('./scripts/b2b-dashboard');
+const landingVars = require('./scripts/landing');
 const compactVars = require('./scripts/compact-vars');
 
 const { webpack } = getWebpackConfig;
@@ -111,6 +112,7 @@ const legacyEntryVars = {
 const webpackConfig = injectLessVariables(getWebpackConfig(false), legacyEntryVars);
 const webpackDarkConfig = injectLessVariables(getWebpackConfig(false), legacyEntryVars);
 const webpackB2BConfig = injectLessVariables(getWebpackConfig(false), legacyEntryVars);
+const webpackLandingConfig = injectLessVariables(getWebpackConfig(false), legacyEntryVars);
 const webpackCompactConfig = injectLessVariables(getWebpackConfig(false), legacyEntryVars);
 const webpackVariableConfig = injectLessVariables(getWebpackConfig(false), {
   'root-entry-name': 'variable',
@@ -153,6 +155,7 @@ if (process.env.RUN_ENV === 'PRODUCTION') {
 
   processWebpackThemeConfig(webpackDarkConfig, 'dark', darkVars);
   processWebpackThemeConfig(webpackB2BConfig, 'b2b', b2bVars);
+  processWebpackThemeConfig(webpackLandingConfig, 'landing', landingVars);
   processWebpackThemeConfig(webpackCompactConfig, 'compact', compactVars);
   processWebpackThemeConfig(webpackVariableConfig, 'variable', {});
 }
@@ -160,6 +163,7 @@ if (process.env.RUN_ENV === 'PRODUCTION') {
 module.exports = [
   ...webpackConfig,
   ...webpackB2BConfig,
+  ...webpackLandingConfig,
   ...webpackDarkConfig,
   ...webpackCompactConfig,
   ...webpackVariableConfig,

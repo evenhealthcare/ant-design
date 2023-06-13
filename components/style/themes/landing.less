@@ -1,0 +1,91 @@
+@import './default.less';
+
+// From here you can overwrite the ant design theme's default properties
+// For a list of all properties go here
+// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+
+// TODO: All color names should be context specific,
+// Need to sync-up with designers to create a palette (with color names)
+
+// custom colors
+
+@even-green: #2cc48b;
+@even-pink: #febacd;
+@even-purple: #dadbf1;
+
+@even-black: #333333;
+@even-black-1: #222222;
+@even-black-2: #444444;
+@even-black-3: #080808;
+
+@even-grey-1: #999999;
+@even-grey-2: #dddddd;
+@even-grey-3: #666666;
+@even-grey-4: #f2f2f2;
+@even-grey-5: #eeeeee;
+@even-grey-6: #f5f5f5;
+@even-grey-7: #bbbbbb;
+@even-grey-8: #f9f9f9;
+@even-grey-9: #f8f8f8;
+@even-grey-10: #c6c6c6;
+@even-grey-11: #dcdfe4;
+@even-grey-12: #c4c4c4;
+@even-grey-13: #f0f2f5;
+
+@even-purple-1: #dbdcf1;
+@even-purple-2: #dbdcf2;
+@even-purple-3: #111547;
+
+@even-yellow-1: #fbe277;
+@even-yellow-2: #ffe36b;
+@even-yellow-3: #fff8e7;
+@even-yellow: #fff8e7;
+@even-yellow-4: #e7b950;
+
+@even-light-blue: #ddeeff;
+@even-light-blue-1: #f5f8fa;
+@even-light-blue-2: #1da1f2;
+@even-care: #4e52ac;
+@even-care-dark: #d7bfff;
+@even-plus-dark: #111155;
+
+@even-red: #cc3333;
+@even-red-2: #ff7777;
+//Here are some major variables:
+
+@background: #c5f3ec;
+@primary-color: #0055ff; // primary color for all components
+@link-color: @primary-color; // link color
+@success-color: #00ffff; //#52c41a; // success state color // modified
+@warning-color: #faad14; // warning state color
+@error-color: #f5222d; // error state color
+@font-size-base: 14px; // major text font size
+@heading-color: @even-black; // heading text color
+@text-color: @even-black; // major text color
+@text-color-secondary: @even-black; // secondary text color
+@disabled-color: rgba(0, 0, 0, 0.25); // disable state color
+@border-radius-base: 4px; // major border radius
+@border-color-base: #d9d9d9; // major border color
+@box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+  0 9px 28px 8px rgba(0, 0, 0, 0.05); // major shadow for layers
+@btn-disable-color: #bbbbbb;
+@btn-disable-bg: #dddddd;
+
+// Layout
+@layout-body-background: #f9f9fc; // modified
+@layout-header-background: transparent;
+@layout-header-height: 78px;
+@layout-header-padding: 0 50px;
+@layout-header-color: @text-color;
+@layout-footer-padding: 24px 50px;
+@layout-footer-background: @layout-body-background;
+@layout-sider-background: @layout-header-background;
+@layout-trigger-height: 48px;
+@layout-trigger-background: #002140;
+@layout-trigger-color: #fff;
+@layout-zero-trigger-width: 36px;
+@layout-zero-trigger-height: 42px;
+// Layout light theme
+@layout-sider-background-light: #fff;
+@layout-trigger-background-light: #fff;
+@layout-trigger-color-light: @text-color;
